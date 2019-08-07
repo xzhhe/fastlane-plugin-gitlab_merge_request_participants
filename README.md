@@ -18,9 +18,24 @@ Get a list of merge request participants
 
 ## Example
 
-Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
+```ruby
+fastlane_require 'pp'
+lane :test do
+  pp gitlab_merge_request_participants(
+    host: 'https://git.in.xxx.com/api/v4',
+    private_token: 'xxx',
+    project_id: '16456',
+    mr_id: '33',
+    ignore_users: [56,421,426,1016,143]
+  )
+end
+```
 
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
+then output like this:
+
+```
+["xiongzenghui", "chenkang", "wangfei", "hchen"]
+```
 
 ## Run tests for this plugin
 

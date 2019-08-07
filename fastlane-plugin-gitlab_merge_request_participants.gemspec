@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'zxcvb1234001@163.com'
 
   spec.summary       = 'Get a list of merge request participants'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-gitlab_merge_request_participants"
+  spec.homepage      = 'https://github.com/xzhhe/fastlane-plugin-gitlab_merge_request_participants'
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
   # since this would cause a circular dependency
 
   # spec.add_dependency 'your-dependency', '~> 1.0.0'
+  spec.add_dependency 'gitlab', '4.11.0'
 
   spec.add_development_dependency('pry')
   spec.add_development_dependency('bundler')

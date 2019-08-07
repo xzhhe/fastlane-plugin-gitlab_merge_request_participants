@@ -1,3 +1,10 @@
+fastlane_require 'pp'
 lane :test do
-  gitlab_merge_request_participants
+  pp gitlab_merge_request_participants(
+    host: 'https://git.in.xxx.com/api/v4',
+    private_token: 'xxx',
+    project_id: '16456',
+    mr_id: '33',
+    ignore_users: [56,421,426,1016,143]
+  )
 end
